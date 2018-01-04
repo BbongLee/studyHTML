@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <title>@media query</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        #nav,
+        #footer,
+        #side {
+            background-color: rgb(255, 208, 208);
+        }
+        #nav {
+            margin: 0 0 10px 0;
+            padding: 5px;
+            text-align: right;
+        }
+        #nav li {
+            display: inline;
+        }
+        #contents {
+            min-height: 400px;
+            background: #E4F7BA;
+            width: 80%;
+            float: left;
+        }
+        #side {
+            min-height: 400px;
+        }
+        #footer {
+            margin-top: 10px;
+        }
+        @media screen and (max-width: 480px) {
+            #contents {
+                width: auto;
+                float: none;
+                min-height: 200px;
+                margin-bottom: 10px;
+            }
+            #side {
+                width: auto;
+                min-height: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Guest</a>
+        </li>
+        <li>
+            <a href="#">Noitce</a>
+        </li>
+    </ul>
+    <div id="contents">본문</div>
+    <div id="side">오른쪽 사이드바</div>
+    <div id="footer">footer</div>
+</body>
+
+</html>
